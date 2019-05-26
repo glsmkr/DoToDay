@@ -73,30 +73,50 @@
             </objects>
             <point key="canvasLocation" x="-135" y="-131.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Note View Controller-->
         <scene sceneID="ovl-s0-gN4">
             <objects>
-                <viewController id="PAd-cz-qR2" sceneMemberID="viewController">
+                <viewController id="PAd-cz-qR2" customClass="NoteViewController" customModule="DoToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Be-hy-tM2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-rM-YGP" customClass="CardTextView" customModule="DoToday" customModuleProvider="target">
-                                <rect key="frame" x="16" y="166" width="343" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="324-F8-HJN" customClass="CardTextView" customModule="DoToday" customModuleProvider="target">
-                                <rect key="frame" x="16" y="282" width="343" height="430"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="8I2-0Z-eL4">
+                                <rect key="frame" x="16" y="153" width="343" height="506"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-0W-sAg">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="29"/>
+                                        <segments>
+                                            <segment title="Yellow"/>
+                                            <segment title="Orange"/>
+                                            <segment title="Urgent"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-rM-YGP" customClass="CardTextView" customModule="DoToday" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="343" height="66"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="7SK-I1-DM2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="324-F8-HJN" customClass="CardTextView" customModule="DoToday" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="168" width="343" height="338"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8I2-0Z-eL4" firstAttribute="centerY" secondItem="5Be-hy-tM2" secondAttribute="centerY" id="9m6-Fc-fHX"/>
+                            <constraint firstItem="8I2-0Z-eL4" firstAttribute="leading" secondItem="5Be-hy-tM2" secondAttribute="leadingMargin" id="a0a-7B-Ugh"/>
+                            <constraint firstItem="8I2-0Z-eL4" firstAttribute="top" secondItem="doI-uf-6XE" secondAttribute="top" constant="13" id="jmY-Yb-yuA"/>
+                            <constraint firstItem="8I2-0Z-eL4" firstAttribute="centerX" secondItem="5Be-hy-tM2" secondAttribute="centerX" id="tif-C4-wT1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="doI-uf-6XE"/>
                     </view>
                 </viewController>

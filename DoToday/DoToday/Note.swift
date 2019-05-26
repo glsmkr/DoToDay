@@ -10,6 +10,7 @@ import UIKit
 
 struct Note {
     var todo: String
+    var detail: String
     var colorName: String
     
     var color: UIColor {
