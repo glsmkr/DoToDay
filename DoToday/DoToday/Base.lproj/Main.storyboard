@@ -17,6 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="75" id="djh-cJ-kQT" customClass="NoteTableViewCell" customModule="DoToday" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
@@ -25,9 +26,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dt-Za-aFd">
-                                            <rect key="frame" x="16" y="10.666666666666668" width="343" height="53.333333333333329"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dt-Za-aFd" customClass="CardView" customModule="DoToday" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="10.666666666666668" width="359" height="53.333333333333329"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErH-Ld-QfJ">
                                             <rect key="frame" x="24" y="27" width="327" height="21"/>
@@ -41,12 +42,14 @@
                                         <constraint firstItem="ErH-Ld-QfJ" firstAttribute="leading" secondItem="jFv-Et-1ZV" secondAttribute="leadingMargin" constant="8" id="EMx-NP-jPz"/>
                                         <constraint firstItem="3dt-Za-aFd" firstAttribute="centerY" secondItem="jFv-Et-1ZV" secondAttribute="centerY" id="EXJ-lo-7C3"/>
                                         <constraint firstItem="3dt-Za-aFd" firstAttribute="centerX" secondItem="jFv-Et-1ZV" secondAttribute="centerX" id="GFZ-Ge-N15"/>
+                                        <constraint firstAttribute="trailing" secondItem="3dt-Za-aFd" secondAttribute="trailing" constant="8" id="QGN-Ww-naL"/>
                                         <constraint firstItem="3dt-Za-aFd" firstAttribute="bottom" secondItem="jFv-Et-1ZV" secondAttribute="bottomMargin" id="gOU-4y-QUc"/>
+                                        <constraint firstItem="3dt-Za-aFd" firstAttribute="leading" secondItem="jFv-Et-1ZV" secondAttribute="leading" constant="8" id="gkw-gZ-bZ6"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="ErH-Ld-QfJ" secondAttribute="bottom" constant="16" id="ssn-B2-xaj"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ErH-Ld-QfJ" secondAttribute="trailing" constant="8" id="uru-yV-XZa"/>
-                                        <constraint firstItem="3dt-Za-aFd" firstAttribute="trailing" secondItem="jFv-Et-1ZV" secondAttribute="trailingMargin" id="xb2-t7-Chp"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="notesLabel" destination="ErH-Ld-QfJ" id="OaR-YB-oJA"/>
                                 </connections>
