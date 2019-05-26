@@ -119,6 +119,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="doI-uf-6XE"/>
                     </view>
+                    <connections>
+                        <outlet property="colorSegControl" destination="dqg-0W-sAg" id="ck1-Sq-bnQ"/>
+                        <outlet property="detailTextView" destination="324-F8-HJN" id="vao-vv-PXb"/>
+                        <outlet property="todoTextView" destination="Sxe-rM-YGP" id="yno-P4-Axp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijI-E6-cdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,6 +12,7 @@ struct Note {
     var todo: String
     var detail: String
     var colorName: String
+   // var isCompleted: Bool = false
     
     var color: UIColor {
        let newColor =  UIColor(named: colorName)!
