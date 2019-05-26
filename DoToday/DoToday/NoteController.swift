@@ -8,4 +8,19 @@
 
 import Foundation
 
-
+class NoteController {
+    
+    func createToDo(withNote toDo: String, withColor colorName: String) {
+        let note = Note(todo: toDo, colorName: colorName)
+         notes.append(note)
+    }
+    
+    
+    
+    
+    
+    
+    // MARK: - Properties
+    
+    var notes: [Note] = []
+}
