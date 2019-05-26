@@ -47,6 +47,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C41C9F84229B1803000294D5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C41C9F78229A1070000294D5 /* NotesTableViewController.swift */,
+				C41C9F82229A30C4000294D5 /* NoteViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C41C9F85229B1840000294D5 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C41C9F7E229A2302000294D5 /* NoteController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		C41C9F86229B185C000294D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C41C9F7C229A1C83000294D5 /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C41C9F87229B187D000294D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C41C9F7A229A1967000294D5 /* CardView.swift */,
+				C41C9F80229A2BEB000294D5 /* CardTextView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C41C9F88229B1888000294D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7EBB6228E4BD40095AFA0 /* NoteTableViewCell.swift */,
+				C441403B226948230040090F /* Main.storyboard */,
+				C4414040226948250040090F /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C41C9F89229B1A92000294D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4414037226948230040090F /* AppDelegate.swift */,
+				C441403E226948250040090F /* Assets.xcassets */,
+				C4414043226948250040090F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C441402B226948230040090F = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +120,12 @@
 		C4414036226948230040090F /* DoToday */ = {
 			isa = PBXGroup;
 			children = (
-				C41C9F78229A1070000294D5 /* NotesTableViewController.swift */,
-				C4414037226948230040090F /* AppDelegate.swift */,
-				C441403B226948230040090F /* Main.storyboard */,
-				C41C9F7E229A2302000294D5 /* NoteController.swift */,
-				C41C9F82229A30C4000294D5 /* NoteViewController.swift */,
-				C41C9F7C229A1C83000294D5 /* Note.swift */,
-				C41C9F7A229A1967000294D5 /* CardView.swift */,
-				C41C9F80229A2BEB000294D5 /* CardTextView.swift */,
-				C4E7EBB6228E4BD40095AFA0 /* NoteTableViewCell.swift */,
-				C441403E226948250040090F /* Assets.xcassets */,
-				C4414040226948250040090F /* LaunchScreen.storyboard */,
-				C4414043226948250040090F /* Info.plist */,
+				C41C9F84229B1803000294D5 /* View Controllers */,
+				C41C9F85229B1840000294D5 /* Model Controller */,
+				C41C9F86229B185C000294D5 /* Model */,
+				C41C9F87229B187D000294D5 /* Helpers */,
+				C41C9F88229B1888000294D5 /* Views */,
+				C41C9F89229B1A92000294D5 /* Resources */,
 			);
 			path = DoToday;
 			sourceTree = "<group>";

@@ -122,6 +122,9 @@
                                         <rect key="frame" x="105.5" y="0.0" width="37" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="PAd-cz-qR2" eventType="touchUpInside" id="z8z-8H-a8c"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
