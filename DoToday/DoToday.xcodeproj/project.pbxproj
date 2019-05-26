@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41C9F79229A1070000294D5 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C9F78229A1070000294D5 /* NotesTableViewController.swift */; };
 		C4414038226948230040090F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4414037226948230040090F /* AppDelegate.swift */; };
 		C441403D226948230040090F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C441403B226948230040090F /* Main.storyboard */; };
 		C441403F226948250040090F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C441403E226948250040090F /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C41C9F78229A1070000294D5 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		C4414034226948230040090F /* DoToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4414037226948230040090F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C441403C226948230040090F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		C4414036226948230040090F /* DoToday */ = {
 			isa = PBXGroup;
 			children = (
+				C41C9F78229A1070000294D5 /* NotesTableViewController.swift */,
 				C4414037226948230040090F /* AppDelegate.swift */,
 				C441403B226948230040090F /* Main.storyboard */,
 				C4E7EBB6228E4BD40095AFA0 /* NoteTableViewCell.swift */,
@@ -137,6 +140,7 @@
 			files = (
 				C4414038226948230040090F /* AppDelegate.swift in Sources */,
 				C4E7EBB7228E4BD40095AFA0 /* NoteTableViewCell.swift in Sources */,
+				C41C9F79229A1070000294D5 /* NotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
