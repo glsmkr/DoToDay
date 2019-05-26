@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jed-KI-1NJ">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,22 +9,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--DoToday-->
         <scene sceneID="aPj-f5-qYA">
             <objects>
                 <tableViewController id="7qo-Vk-sxy" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SeP-ph-735">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="75" id="djh-cJ-kQT" customClass="NoteTableViewCell" customModule="DoToday" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="75" id="djh-cJ-kQT" customClass="NoteTableViewCell" customModule="DoToday" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="djh-cJ-kQT" id="jFv-Et-1ZV">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="74.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dt-Za-aFd">
+                                            <rect key="frame" x="16" y="10.5" width="288" height="53.5"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErH-Ld-QfJ">
+                                            <rect key="frame" x="24" y="27" width="272" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ErH-Ld-QfJ" firstAttribute="top" secondItem="jFv-Et-1ZV" secondAttribute="topMargin" constant="16" id="7FP-Rg-WRC"/>
+                                        <constraint firstItem="ErH-Ld-QfJ" firstAttribute="leading" secondItem="jFv-Et-1ZV" secondAttribute="leadingMargin" constant="8" id="EMx-NP-jPz"/>
+                                        <constraint firstItem="3dt-Za-aFd" firstAttribute="centerY" secondItem="jFv-Et-1ZV" secondAttribute="centerY" id="EXJ-lo-7C3"/>
+                                        <constraint firstItem="3dt-Za-aFd" firstAttribute="centerX" secondItem="jFv-Et-1ZV" secondAttribute="centerX" id="GFZ-Ge-N15"/>
+                                        <constraint firstItem="3dt-Za-aFd" firstAttribute="bottom" secondItem="jFv-Et-1ZV" secondAttribute="bottomMargin" id="gOU-4y-QUc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ErH-Ld-QfJ" secondAttribute="bottom" constant="16" id="ssn-B2-xaj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ErH-Ld-QfJ" secondAttribute="trailing" constant="8" id="uru-yV-XZa"/>
+                                        <constraint firstItem="3dt-Za-aFd" firstAttribute="trailing" secondItem="jFv-Et-1ZV" secondAttribute="trailingMargin" id="xb2-t7-Chp"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="notesLabel" destination="ErH-Ld-QfJ" id="OaR-YB-oJA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,18 +57,18 @@
                             <outlet property="delegate" destination="7qo-Vk-sxy" id="cAJ-7h-BL2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="MA0-wl-SPa"/>
+                    <navigationItem key="navigationItem" title="DoToday" id="MA0-wl-SPa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXM-nM-OqK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-133.59999999999999" y="-130.04926108374386"/>
+            <point key="canvasLocation" x="-135" y="-131.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PXp-2P-SAb">
             <objects>
                 <navigationController id="jed-KI-1NJ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IIG-gt-IvJ">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
