@@ -22,8 +22,9 @@ class NotesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as? NoteTableViewCell else { fatalError("Unable to cast and dequeue as NoteTableViewCell")}
+        let color = colors[indexPath.row]
+        cell.notesLabel.text = color
         return cell
     }
     
