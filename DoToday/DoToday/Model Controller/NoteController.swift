@@ -10,8 +10,8 @@ import Foundation
 
 class NoteController {
     
-    func createToDo(withNote toDo: String, withColor colorName: String, withDetail detail: String) {
-        let note = Note(todo: toDo, detail: detail, colorName: colorName)
+    func createToDo(withNote toDo: String, withDetail detail: String) {
+        let note = Note(todo: toDo, detail: detail) //colorName: colorName)
          notes.append(note)
     }
     

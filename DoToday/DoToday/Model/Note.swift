@@ -11,11 +11,18 @@ import UIKit
 struct Note {
     var todo: String
     var detail: String
-    var colorName: String
-   // var isCompleted: Bool = false
+   // var colorName: String
+    var isCompleted: Bool = false
     
-    var color: UIColor {
-       let newColor =  UIColor(named: colorName)!
-        return newColor
+   
+    init(todo: String, detail: String, isCompleted: Bool = false) {
+        self.todo = todo
+        self.detail = detail
+        //self.colorName = colorName
+        self.isCompleted = isCompleted
     }
+    
+//    var color: UIColor {
+//        return UIColor(named: colorName)!
+//    }
 }
