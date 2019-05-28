@@ -12,6 +12,7 @@ class NoteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
     }
     
     
@@ -44,6 +45,9 @@ class NoteViewController: UIViewController {
     
 
     private func updateViews() {
+        guard let note = note, isViewLoaded else { return }
+        todoTextView.text = note.todo
+        detailTextView.text = note.detail
         
         
     }
@@ -62,5 +66,9 @@ class NoteViewController: UIViewController {
     @IBOutlet weak var detailTextView: CardTextView!
     
     var noteController: NoteController?
-    var note: Note?
+    var note: Note? {
+        didSet {
+            updateViews()
+        }
+    }
 }
